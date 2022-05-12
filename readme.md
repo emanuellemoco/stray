@@ -1,6 +1,6 @@
 
 
-Achar algum carro (ambulacia, policia ou bombeiro) passando em direcao a algumm lugar
+Achar algum carro (ambulancia, policia ou bombeiro) passando em direcao a algumm lugar
 
 Ninho de rato que se a pessoa passar, morre e volta para o inicio
 
@@ -25,3 +25,11 @@ Uma pessoa seguindo o jogador quando ele vai por um caminho errado
 
 Just got off work, I need to get home
 The city feels strange today
+
+
+
+
+carro 
+helicoptero
+chave/portao
+fim de jogo
