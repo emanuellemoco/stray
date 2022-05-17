@@ -9,7 +9,10 @@ public class CarMove : MonoBehaviour
 
     public Transform end;
 
-    public float vel;
+    public float time;
+    float t = 0;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +23,9 @@ public class CarMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-         transform.position = Vector3.Lerp(start.position, end.position, vel * Time.deltaTime);
+                     t += Time.deltaTime/time;
+
+         transform.position = Vector3.Lerp(start.position, end.position, t);
+        // transform.position =  Vector3.MoveTowards(start.position, end.position, vel);
     }
 }
