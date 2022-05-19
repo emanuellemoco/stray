@@ -8,14 +8,14 @@ public class PasswordController : MonoBehaviour
 
     public Text digits;
 
-    public GameObject endgame;
+    public GateLogic logic;
 
     public List<GameObject> buttons = new List<GameObject>();
 
     List<int> password = new List<int>();
     List<int> truePassword; //= new List<int>();
     void Start(){
-        truePassword = new List<int>( new int[] {1,0,7,9,2,0,2,9});
+        truePassword = new List<int>( new int[] {1,1,1,1,1,1});
 
     }
 
@@ -45,7 +45,7 @@ public class PasswordController : MonoBehaviour
         print("Check answer");
         if (CheckMatch(password, truePassword)){
             print("IS EQUAL");
-            endGame();
+            openDoor();
         }
         else {
             password.Clear();
@@ -53,10 +53,10 @@ public class PasswordController : MonoBehaviour
         }
     }
 
-    void endGame(){
-        print("ENDGAME");
+    void openDoor(){
         digits.color = Color.green;
-        endgame.SetActive(true);
+        logic.openDoor();
+        //endgame.SetActive(true);
 
     }
 
