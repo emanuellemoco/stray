@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CarMove : MonoBehaviour
 {
-
+    public bool trigger = false;
     public Transform start;
 
     public Transform end;
@@ -23,9 +23,9 @@ public class CarMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-                     t += Time.deltaTime/time;
-
-         transform.position = Vector3.Lerp(start.position, end.position, t);
-        // transform.position =  Vector3.MoveTowards(start.position, end.position, vel);
+            if (trigger){
+                t += Time.deltaTime/time;
+                transform.position = Vector3.Lerp(start.position, end.position, t);
+            }
     }
 }
