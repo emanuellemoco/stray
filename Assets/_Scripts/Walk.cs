@@ -25,6 +25,7 @@ public class Walk : MonoBehaviour
 
     public float playerSpeed = 2.0f;
 
+    public AudioClip footSteps;
     // private float gravityValue = -9.81f;
 
 
@@ -40,6 +41,8 @@ public class Walk : MonoBehaviour
 
     public SteamVR_Input_Sources hand;
 
+    AudioSource audioSource; 
+
 
     private void Start()
 
@@ -48,6 +51,7 @@ public class Walk : MonoBehaviour
         controller = gameObject.GetComponent<CharacterController>();
 
         actionSet.Activate(hand);
+        audioSource = GetComponent<AudioSource>();
 
     }
 
@@ -84,6 +88,9 @@ public class Walk : MonoBehaviour
         Vector3 move = VRCamera.transform.rotation * new Vector3(m.x, 0, m.y);
         move.y = 0f;
         //transform.position = transform.position + move * Time.deltaTime * playerSpeed;
+        if (move != Vector3.zero && !audioSource.isPlaying){
+            audioSource.Play();
+        }
         controller.Move(move *playerSpeed* Time.deltaTime);
 
 
