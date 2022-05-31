@@ -33,3 +33,15 @@ carro
 helicoptero
 chave/portao
 fim de jogo
+
+
+Sprint proxima
+- Legendas ao andar
+- Sons aleatorios quando anda
+- Acabar o jogo sem detalhes
+
+
+Achar barulho de orelhao, comecar a tocar quando a pessoa estiver a uma quadra
+quando chegar no orelhao, parar de tocar e sai um gripo e 2 digitos da senha. 
+
+Achar um totem para colocar a senha 
