@@ -5,17 +5,10 @@ using UnityEngine;
 public class CarTrigger : MonoBehaviour
 {
     public CarMove car;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     private void OnTriggerEnter(Collider other)
     {
-        car.trigger = true;
-        Debug.Log("car");
+        car.Move();
 
     }
 }
