@@ -7,11 +7,13 @@ public class TriggerMessage : MonoBehaviour
 
     public string message;
     public TextController controller;
+    public bool repeat;
+    private bool hasPlayed;
     int index;
     // Start is called before the first frame update
     void Start()
     {
-        
+        hasPlayed = false;
     }
 
     // Update is called once per frame
@@ -21,10 +23,10 @@ public class TriggerMessage : MonoBehaviour
     }
     private void OnTriggerEnter(Collider trigger)
     {
-        Debug.Log("Enter trigger");
-        //int.TryParse(trigger.tag, out index);
-
-        controller.PlayMessage(message);
+        if (repeat || !hasPlayed){
+            controller.PlayMessage(message);
+        }
+        hasPlayed = true;
     }
 
 }
