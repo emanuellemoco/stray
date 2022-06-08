@@ -15,7 +15,7 @@ public class PasswordController : MonoBehaviour
     List<int> password = new List<int>();
     List<int> truePassword; //= new List<int>();
     void Start(){
-        truePassword = new List<int>( new int[] {1,1,1,1,1,1});
+        truePassword = new List<int>( new int[] {2,5,1,8,2,2});
 
     }
 
