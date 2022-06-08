@@ -6,15 +6,15 @@ using UnityEngine.SceneManagement;
  
 public class Buttons : MonoBehaviour
 {
-    [SerializeField] private AudioSource button_sound;
+    // [SerializeField] private AudioSource button_sound;
 
     public void RestartScene(){
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        button_sound.Play();
+        // button_sound.Play();
     }
 
     public void QuitGame(){
-        button_sound.Play();
+        // button_sound.Play();
         Application.Quit();
     }
 }
